@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ideas</h1>
+<h3>Here are all my great ideas</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Light_in_linger.jpg/512px-Light_in_linger.jpg" width=50/>
+<div id="ideas">
+  <% @ideas.each do |idea| %>
+    <%= render idea %>
+    <p>
+      <%= link_to "Show this idea", idea %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New idea", new_idea_path %>
